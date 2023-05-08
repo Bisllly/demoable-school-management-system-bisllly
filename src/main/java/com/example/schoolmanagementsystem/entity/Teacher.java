@@ -1,13 +1,21 @@
 package com.example.schoolmanagementsystem.entity;
 
+import jakarta.persistence.OneToMany;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Document( collection = "teachers")
 public class Teacher{
     @Id
 //    @GeneratedValue( strategy = GenerationType.IDENTITY)
     private String id;
+
+    //for classroom table
+    @OneToMany(mappedBy = "teacher")
+    private List<Classroom> classrooms;
+    //
 
 //    @Column( name = "first_name", nullable = false)
     private String firstName;

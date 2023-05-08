@@ -1,5 +1,7 @@
 package com.example.schoolmanagementsystem.entity;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,6 +10,12 @@ public class Student{
     @Id
 //    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private String id;
+
+    //for classroom table
+    @ManyToOne
+    @JoinColumn(name = "classroom_id")
+    private Classroom classroom;
+    //
 
 //    @Column( name = "first_name", nullable = false)
     private String firstName;
