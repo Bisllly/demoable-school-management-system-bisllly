@@ -1,4 +1,4 @@
-package com.example.schoolmanagementsystem.service;
-
-public interface ConfessionService {
-}
+//package com.example.schoolmanagementsystem.service;
+//
+//public interface ConfessionService {
+//}
