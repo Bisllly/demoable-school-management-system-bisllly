@@ -26,7 +26,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher getTeacherById(Long id) {
+    public Teacher getTeacherById(String id) {
         return teacherRepository.findById(id).get();
     }
 
@@ -36,7 +36,7 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public void deleteTeacherById(Long id) {
+    public void deleteTeacherById(String id) {
         teacherRepository.deleteById(id);
     }
 }
